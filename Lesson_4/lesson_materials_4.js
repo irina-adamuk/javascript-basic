@@ -1,5 +1,6 @@
 'use strict';
 /*
+// ? Материалы учебника
 let greetings = {
    vasya: "Hello vasya",
    ira: "Privet Ira",
@@ -124,3 +125,120 @@ ladder
    .down()
    .showStep(); // 1
 */
+
+// ? Материалы урока
+/*
+function getPropName(prop) {
+   return 'testing new proper ' + prop;
+}
+const myCar = {
+   manufacture: 'Toyota',
+   color: 'black',
+   'model og engine': 'w200',
+   [getPropName('test')]: 2,
+}
+myCar.newProp = 'add';
+myCar['name'] = 'ghjk';
+console.log(myCar);
+
+*/
+/*
+const myCar = {
+   manufacture: 'BMW',
+   color: 'Blue',
+   engine: {
+      power: 300,
+      code: 'xxxxx',
+   },
+   posibleColors: ['black', 'white', 'brown', 'gray'],
+   // beep: function () {
+   //   console.log('Beep!');
+   // }
+   beep() {
+      console.log('Beep!');
+   },
+};
+
+for (let i = 0; i < myCar.posibleColors.length; i++) {
+   console.log(myCar.posibleColors[i]);
+}
+*/
+
+// ? ***************************************************
+// console.log(Object.keys(myCar));
+
+// ? этот метод пробежится по всему объекту и консоль выведет названия всех свойств
+
+// ! возвращает те свойства, которые присущи конкретно этому объекту 
+ // console.log(Object.getOwnPropertyNames(myCar));
+
+/*
+for( const prop in myCar) {
+   console.log('свойство: ', prop , 'значение: ', myCar[prop]);
+}
+*/
+
+/*
+
+function inc(a) {
+   a++;
+}
+
+let a = 1;
+
+inc(a);
+console.log(a);
+*/
+/*
+// ? В этом примере ссылка на объект, поэтому в консоль выведется 6
+const obj = {
+   num: 5,
+};
+
+function inc(obj) {
+   obj.num++;
+}
+
+inc(obj);
+console.log(obj.num);
+*/
+
+
+// ! В этом примере объект копируется, поэтому в самом объекте obj ничего не изменится
+/*
+const obj = {
+   num: 5,
+};
+
+function inc(obj) {
+   const objCopy = Object.assign({}, obj);
+   objCopy.num++;
+   console.log(objCopy.num);
+}
+
+inc(obj);
+console.log(obj.num);
+*/
+
+/*
+function getObject() {
+   return {
+      number: 5,
+      sayNumber() {
+         console.log('Номер в объекте: ', this.number);
+      }
+   }
+}
+
+const myObject = getObject();
+console.log(myObject);
+
+const mySayNumber = myObject.sayNumber;
+
+myObject.sayNumber();
+*/
+
+// ? Проверка есть ли свойство в объекте. Эта конструкция вернет либо true  либо false
+
+// console.log('number' in myObject);
+

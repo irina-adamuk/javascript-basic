@@ -28,9 +28,11 @@ const cart = [
 ];
 
 
-let sum = 0;
+
 
 function countBasketPrice() {
+   let sum = 0;
+   
    for (const item of cart) {
       let amount = item[1] * item[2];
       sum += amount;

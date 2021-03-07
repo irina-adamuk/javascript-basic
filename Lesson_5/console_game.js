@@ -13,9 +13,9 @@ const settings = {
 const player = {
    x: null,
    y: null,
-   direction: '',
+   direction: '', // null in video
 
-    setDirection(direction) { // this.player.setDirection('someDirection');
+   setDirection(direction) { // this.player.setDirection('someDirection');
       this.direction = direction;
    },
 
@@ -97,12 +97,12 @@ const game = {
             const tr = document.createElement('tr');
             this.containerElement.appendChild(tr);
 
-            for (let col = 0; col < this.settings.colCount; col++) {
-               const td = document.createElement('td');
-               tr.appendChild(td);
+         for (let col = 0; col < this.settings.colCount; col++) {
+            const td = document.createElement('td');
+            tr.appendChild(td);
 
-               this.cellElements.push(td);
-            }
+            this.cellElements.push(td);
+         }
       }
    },
 

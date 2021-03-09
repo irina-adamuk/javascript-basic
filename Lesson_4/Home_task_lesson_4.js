@@ -61,6 +61,28 @@ function fillObject(hundreds, tens, units, object) {
 let object = getObject(numberFromUser);
 console.log(object);
 
+   // ? Решение учителя
+   /**
+     * Функция разбивает число по разрядам и возвращает объект с записанными разрядами числа.
+     * @param {int} num Число в диапазоне [0, 999], которое разобьется на разряды.
+     * @returns {Object} Объект с разрядами числа или пустой объект в случае ошибки.
+     */
+      /*
+      function getDigitsOfNumber(num) {
+      if (!Number.isInteger(num) || num < 0 || num > 999) {
+         console.log('Значение аргумента должно быть целым числом в диапазоне [0 .. 999].');
+         return {};
+      }
+
+      return {
+         firstDigit: num % 10,
+         secondDigit: Math.floor(num / 10) % 10,
+         thirdDigit: Math.floor(num / 100),
+      };
+   }
+
+   console.log(getDigitsOfNumber(123));
+   */
 
 /*
 2.Продолжить работу с интернет-магазином:
@@ -69,45 +91,33 @@ console.log(object);
 2.2. Реализуйте такие объекты.
 2.3. Перенести функционал подсчета корзины на объектно-ориентированную базу.
 */
-
-const product1 = {
-   name: 'юбка',
-   cost: 1000,
-   quantity: 4,
-}
-
-const product2 = {
-   name: 'платок',
-   cost: 300,
-   quantity: 7,
-}
-
-const product3 = {
-   name: 'носки',
-   cost: 100,
-   quantity: 2,
-}
-
-const product4 = {
-   name: 'брюки',
-   cost: 2000,
-   quantity: 8,
-}
-
-const product5 = {
-   name: 'рубашка',
-   cost: 1500,
-   quantity: 3,
-}
-
 const cart = [
-   product1, 
-   product2, 
-   product3, 
-   product4, 
-   product5
+   {
+      name: 'юбка',
+      cost: 1000,
+      quantity: 4,
+   }, 
+   {
+      name: 'платок',
+      cost: 300,
+      quantity: 7,
+   }, 
+   {
+      name: 'носки',
+      cost: 100,
+      quantity: 2,
+   }, 
+   {
+      name: 'рубашка',
+      cost: 1500,
+      quantity: 3,
+   }, 
+   {
+      name: 'рубашка',
+      cost: 1500,
+      quantity: 3,
+   }
 ];
-
 
 function countBasketPrice() {
    let sum = 0;
